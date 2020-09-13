@@ -313,7 +313,7 @@ function start_me_up(){
     let param = get_url_params()
 
     //defaults for params in case not specified
-    if(!param.site){param.site="CWBE"}
+    if(!param.site){param.site="KACY"}
     if(!param.yr){param.yr="2010"}
     if(!param.mo){param.mo="1"}
     if(!param.da){param.da="1"}
