@@ -327,6 +327,7 @@ function start_me_up(){
 
     console.log("site",param.site)
     console.log("howdy howdy howdy ",json)
+    $('#state-label').html("Grate")
     jQuery.getScript(prefix + json)
         .done(function() {
             //set the dropdowns
