@@ -334,7 +334,8 @@ function start_me_up(){
             $('#year').val(param.yr)
             $('#month').val(param.mo)
             $('#day').val(param.da)
-            $('#state-label').val("State")
+            $('#state-label').html("State")
+            console.log("Yikes!")
 
 
             // get the city and state
