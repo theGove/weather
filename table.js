@@ -335,7 +335,7 @@ function start_me_up(){
             $('#year').val(param.yr)
             $('#month').val(param.mo)
             $('#day').val(param.da)
-            $('#state-label').html("State")
+            $('#state-label').html("state")
             console.log("Yikes!")
 
 
