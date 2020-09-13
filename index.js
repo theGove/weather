@@ -373,7 +373,7 @@ function start_me_up(){
                 }
             }else{
                 //US
-                $('#data-table').append('<tr><th>Province</th><th>City</th><th>Date</th><th>Hour</th><th>Temperature</th><th>Dewpoint</th><th>Relative Humidity</th><th>Wind Direction</th><th>Wind Speed</th><th>Clouds</th><th>Pressure</th><th><a href="metar.html" target="_blank">Weather</a></th><th>Precip</th><th>Source</th></tr>');
+                $('#data-table').append('<tr><th>State</th><th>City</th><th>Date</th><th>Hour</th><th>Temperature</th><th>Dewpoint</th><th>Relative Humidity</th><th>Wind Direction</th><th>Wind Speed</th><th>Clouds</th><th>Pressure</th><th><a href="metar.html" target="_blank">Weather</a></th><th>Precip</th><th>Source</th></tr>');
                 for(const one_hour of weather){
                     let row = '<tr><td>' + state + '</td><td>' + city + '</td><td>' + date_string  +'</td>'
                     for(let data_point of one_hour){
