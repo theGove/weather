@@ -51,3 +51,42 @@ a{
       background: #FFF;
       border:1px solid #ddd;
     }
+
+
+
+    /* styles for date picker*/
+    #position {
+      position: relative;
+    }
+  
+    .calendar {
+      background: #FFF;
+      box-shadow: 0 0 5px rgba(0,0,0,.4);
+  
+      position: absolute;
+      z-index: 10;
+      top: 100%;
+      left: 0;
+    }
+  
+    .date-input-fallback {
+      display: none;
+    }
+  
+    .js-no-type-date-support .date-input-native {
+      display: none !important;
+    }
+  
+    .js-no-type-date-support .date-input-fallback {
+      display: inline-block !important;
+    }
+  
+    @media ( min-width: 1025px ) {
+  
+      .date-input-fallback {
+        display: inline-block;
+      }
+      .date-input-native {
+        display: none;
+      }
+    }

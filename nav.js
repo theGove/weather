@@ -296,18 +296,18 @@ sites=[
 function start_me_up(){
     const nav=document.getElementById("nav-div")
     //Create and append select list
-    const select = document.createElement("select");
-    select.id = "sites";
-    nav.appendChild(select);
+    const site_select = document.createElement("select");
+    site_select.id = "sites";
+    nav.appendChild(site_select);
 
     //Create and append the options
     for (const site of sites) {
         var option = document.createElement("option");
         option.value = site[0];
         option.text = site[1] +", "+ site[2];
-        select.appendChild(option);
+        site_select.appendChild(option);
     }
     //create the date picker
-    const select = document.createElement("select");
+    //const select = document.createElement("select");
 
 }
