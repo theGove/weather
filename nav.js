@@ -7,12 +7,15 @@ function start_me_up(){
     var di = document.getElementById('date');
     di.setAttribute("min", sites[current_site][2])
     di.setAttribute("max", sites[current_site][3])
+    di.onchange = navigate
     di.value=d
 
     const nav=document.getElementById("nav-div")
     //Create and append select list
     const site_select = document.createElement("select");
     site_select.id = "sites";
+    site_select.onchange = navigate
+
     nav.prepend(site_select);
 
     //Create and append the options
@@ -27,6 +30,14 @@ function start_me_up(){
     document.getElementById("heading").innerHTML = long_date(d) + " Hourly Weather for " + site_select.options[site_select.selectedIndex].text
     //const select = document.createElement("select");
     document.getElementById("footer").innerHTML = " Temperature: Degrees Fahrenheit.  Wind Speed: Miles Per Hour. Clouds: Fractional Coverage. Pressure: Inches of Mercury"
+}
+
+function navigate(){
+    let url = window.location.href.split(get_site())[0]
+    const d = document.getElementById("date").value.split("-")
+    url +=document.getElementById("sites").value + "/" + d[0] + "/" + d[1] + "/" + d[2] + "/" 
+    window.location.href = url
+
 }
 
 function get_url_params() {
