@@ -1,15 +1,13 @@
 //https://frontierweather.dtn.com/weatherdatastore.html
 function start_me_up(){
     const current_site = get_site()
-    console.log("sites",sites[current_site][3])
-    console.log("date",get_date())
-    
+   
+    let d = get_date()
+
     var di = document.getElementById('date');
     di.setAttribute("min", sites[current_site][2])
     di.setAttribute("max", sites[current_site][3])
-    //di.setAttribute("value", "2018-05-02")
-    di.value=get_date()
-    console.log("di", di)
+    di.value=d
 
     const nav=document.getElementById("nav-div")
     //Create and append select list
@@ -26,9 +24,9 @@ function start_me_up(){
     }
     //create the date picker
     site_select.value = current_site
-
+    document.getElementById("heading").innerHTML = long_date(d) + " Hourly Weather for " + site_select.options[site_select.selectedIndex].text
     //const select = document.createElement("select");
-
+    document.getElementById("footer").innerHTML = " Temperature: Degrees Fahrenheit.  Wind Speed: Miles Per Hour. Clouds: Fractional Coverage. Pressure: Inches of Mercury"
 }
 
 function get_url_params() {
@@ -60,6 +58,14 @@ function get_site(){
     if(n>-1){return a[n-1]}
 
 }
+
+function long_date(short_date){
+    const mL = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const the_date = short_date.split("-")
+    return(mL[the_date[1]-1]+" " + parseInt(the_date[2]) + ", " + the_date[0])
+
+}
+
 
 function get_date(){
     const a = window.location.href.split('/')
