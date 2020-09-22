@@ -35,7 +35,7 @@ function start_me_up(){
 function navigate(){
     let url = window.location.href.split(get_site())[0]
     const d = document.getElementById("date").value.split("-")
-    url +=document.getElementById("sites").value + "/" + d[0] + "/" + d[1] + "/" + d[2] + "/" 
+    url +=document.getElementById("sites").value + "/" + d[0] + "/" + parseInt(d[1]) + "/" + parseInt(d[2]) + "/" 
     window.location.href = url
 
 }
